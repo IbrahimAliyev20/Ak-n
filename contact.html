@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/slick.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Akın</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-fixed">
+      <div class="header">
+        <a href="/index.html" class="header-logo">
+          <img src="./assets/images/logo.svg" alt="Akın" />
+        </a>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="index.html">Ana səhifə</a></li>
+            <li><a href="about.html">Haqqımızda</a></li>
+            <li><a href="projects.html">Layihələr</a></li>
+            <li><a href="services.html">Xidmətlər</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
+          </ul>
+        </nav>
+        <div class="label-burger">
+          <div class="head-label">
+            <button class="openPopup">Bizimlə əlaqə</button>
+          </div>
+          <div class="burger-menu" id="burgerMenu">
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" id="closeBtnNav">&times;</button>
+        <ul>
+          <li><a href="index.html">Ana səhifə</a></li>
+          <li><a href="about.html">Haqqımızda</a></li>
+          <li><a href="projects.html">Layihələr</a></li>
+          <li><a href="services.html">Xidmətlər</a></li>
+          <li><a href="contact.html">Əlaqə</a></li>
+        </ul>
+      </div>
+      <div class="overlay" id="overlay"></div>
+    </div>
+
+
+  </header>
+  <main>
+    <section>
+      <div class="form-section pt-120">
+        <div class="form-container-contact ">
+          <div class="contact-form ">
+            <h2 class="font-primary-popup ">Əlaqə</h2>
+          </div>
+          <div class="form-main">
+            <div class="form-left">
+              <h4>Get in touch</h4>
+              <div class="form-information">
+                <div class="form-icon-card">
+                  <img src="assets/images/mailicons.svg" alt="mail">
+                  <div>
+                    <h6>EMAIL US</h6>
+                    <a href="mailto:" target="_blank">akin@gmail.com </a>
+                  </div>
+                </div>
+                <div class="form-icon-card">
+                  <img src="assets/images/phoneicons.svg" alt="phone">
+                  <div>
+                    <h6>PHONE NUMBER</h6>
+                    <a href="tel:" target="_blank"> +1-202-555-0138 </a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h6>Connect with us:</h6>
+                <div class="form-icons">
+                  <a href="#"><img src="assets/images/facebook-icon.svg" target="_blank" alt="facebook"></a>
+                  <a href="#"><img src="assets/images/linkedin-icon.svg" alt="linkedin"></a>
+                  <a href="#"><img src="assets/images/instagram-icon.svg" alt="instagram"></a>
+                  <a href="#"><img src="assets/images/Social.svg" alt="social"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-right">
+              <div class="input-popup">
+                <div class="name-email-popup">
+                  <div>
+                    <h5>Name</h5>
+                    <input type="text" class="name-input" placeholder="Full name" />
+                  </div>
+                  <div class="email-popup">
+                    <h5>Email</h5>
+                    <input type="email" placeholder="Email adress" id="pupup-email" />
+                  </div>
+                </div>
+
+                <div class="subject-popup">
+                  <h5>Subjects</h5>
+                  <input type="text" name="" id="subject" class="subject" placeholder="Subject">
+                </div>
+                <div class="company-name-popup">
+                  <h5>Company Name</h5>
+                  <input type="text" placeholder="Brand/ Company/ Product Name">
+                </div>
+                <div class="message-popup">
+                  <h5>Message</h5>
+                  <textarea rows="5" placeholder="Tell us about your project..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-btn">
+            <button class="btn-primary">Göndər</button>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-site">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2366.7866974601416!2d49.85310235833754!3d40.377510611674694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d077c61fef3%3A0xfa4594c97092ca01!2sAF%20Business%20House!5e0!3m2!1saz!2saz!4v1740339725652!5m2!1saz!2saz"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+      </div>
+
+    </section>
+
+  </main>
+  
+  <footer>
+    <div class="footer-container mt-80">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <div class="footer-logo-img">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </div>
+          <div class="footer-icons">
+            <img src="/assets/images/facebook.svg" alt="facebook">
+            <img src="/assets/images/X.svg" alt="x">
+            <img src="/assets/images/instagram.svg" alt="instagram">
+            <img src="/assets/images/linkedin.svg" alt="linkedin">
+          </div>
+        </div>
+        <div class="footer-about-container">
+          <div class="footer-about">
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">How to Works</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <div class="footer-about">
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">How to Works</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <div class="footer-about">
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">How to Works</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">United States</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="pop-up-container">
+    <button class="close-btn-popup" id="closeBtnPopup">&times;</button>
+    <div class="popup-contact">
+      <h2 class="font-primary-popup ">Əlaqə</h2>
+    </div>
+
+    <div class="input-popup">
+      <div class="name-popup">
+        <h5>Name</h5>
+        <input type="text" class="name-input" placeholder="Full name" />
+      </div>
+      <div class="email-popup">
+        <h5>Email</h5>
+        <input type="email" placeholder="Email adress" id="pupup-email" />
+      </div>
+      <div class="subject-popup">
+        <h5>Subjects</h5>
+        <input type="text" name="" id="subject" class="subject" placeholder="Subject">
+      </div>
+      <div class="company-name-popup">
+        <h5>Company Name</h5>
+        <input type="text" placeholder="Brand/Company/Product Name">
+      </div>
+      <div class="message-popup">
+        <h5>Message</h5>
+        <input type="text" placeholder="Tell us about your project..." style="height: 102px;">
+      </div>
+      <div class="popup-btn">
+        <button class="btn-primary">Göndər</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery.slick.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

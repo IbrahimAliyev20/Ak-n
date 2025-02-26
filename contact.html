@@ -18,11 +18,34 @@
 <body>
   <header>
     <div class="header-fixed">
-      <div class="header">
-        <a href="/index.html" class="header-logo">
-          <img src="./assets/images/logo.svg" alt="Akın" />
-        </a>
-        <nav class="header-nav">
+      <div class="container-site">
+        <div class="header">
+          <a href="/index.html" class="header-logo">
+            <img src="./assets/images/logo.svg" alt="Akın" />
+          </a>
+          <nav class="header-nav">
+            <ul>
+              <li><a href="index.html">Ana səhifə</a></li>
+              <li><a href="about.html">Haqqımızda</a></li>
+              <li><a href="projects.html">Layihələr</a></li>
+              <li><a href="services.html">Xidmətlər</a></li>
+              <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+          </nav>
+          <div class="label-burger">
+            <div class="head-label">
+              <button class="openPopup">Bizimlə əlaqə</button>
+            </div>
+            <div class="burger-menu" id="burgerMenu">
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mobile-nav" id="mobileNav">
+          <button class="close-btn" id="closeBtnNav">&times;</button>
           <ul>
             <li><a href="index.html">Ana səhifə</a></li>
             <li><a href="about.html">Haqqımızda</a></li>
@@ -30,105 +53,83 @@
             <li><a href="services.html">Xidmətlər</a></li>
             <li><a href="contact.html">Əlaqə</a></li>
           </ul>
-        </nav>
-        <div class="label-burger">
-          <div class="head-label">
-            <button class="openPopup">Bizimlə əlaqə</button>
-          </div>
-          <div class="burger-menu" id="burgerMenu">
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-          </div>
         </div>
+        <div class="overlay" id="overlay"></div>
       </div>
-
-      <div class="mobile-nav" id="mobileNav">
-        <button class="close-btn" id="closeBtnNav">&times;</button>
-        <ul>
-          <li><a href="index.html">Ana səhifə</a></li>
-          <li><a href="about.html">Haqqımızda</a></li>
-          <li><a href="projects.html">Layihələr</a></li>
-          <li><a href="services.html">Xidmətlər</a></li>
-          <li><a href="contact.html">Əlaqə</a></li>
-        </ul>
-      </div>
-      <div class="overlay" id="overlay"></div>
+      
     </div>
-
-
   </header>
   <main>
     <section>
-      <div class="form-section pt-120">
-        <div class="form-container-contact ">
-          <div class="contact-form ">
-            <h2 class="font-primary-popup ">Əlaqə</h2>
-          </div>
-          <div class="form-main">
-            <div class="form-left">
-              <h4>Get in touch</h4>
-              <div class="form-information">
-                <div class="form-icon-card">
-                  <img src="assets/images/mailicons.svg" alt="mail">
-                  <div>
-                    <h6>EMAIL US</h6>
-                    <a href="mailto:" target="_blank">akin@gmail.com </a>
+      <div class="container-site">
+        <div class="form-section pt-120">
+          <div class="form-container-contact ">
+            <div class="contact-form ">
+              <h2 class="font-primary-popup ">Əlaqə</h2>
+            </div>
+            <div class="form-main">
+              <div class="form-left">
+                <h4>Get in touch</h4>
+                <div class="form-information">
+                  <div class="form-icon-card">
+                    <img src="assets/images/mailicons.svg" alt="mail">
+                    <div>
+                      <h6>EMAIL US</h6>
+                      <a href="mailto:" target="_blank">akin@gmail.com </a>
+                    </div>
+                  </div>
+                  <div class="form-icon-card">
+                    <img src="assets/images/phoneicons.svg" alt="phone">
+                    <div>
+                      <h6>PHONE NUMBER</h6>
+                      <a href="tel:" target="_blank"> +1-202-555-0138 </a>
+                    </div>
                   </div>
                 </div>
-                <div class="form-icon-card">
-                  <img src="assets/images/phoneicons.svg" alt="phone">
-                  <div>
-                    <h6>PHONE NUMBER</h6>
-                    <a href="tel:" target="_blank"> +1-202-555-0138 </a>
+  
+                <div>
+                  <h6>Connect with us:</h6>
+                  <div class="form-icons">
+                    <a href="#"><img src="assets/images/facebook-icon.svg" target="_blank" alt="facebook"></a>
+                    <a href="#"><img src="assets/images/linkedin-icon.svg" alt="linkedin"></a>
+                    <a href="#"><img src="assets/images/instagram-icon.svg" alt="instagram"></a>
+                    <a href="#"><img src="assets/images/Social.svg" alt="social"></a>
                   </div>
                 </div>
               </div>
-
-              <div>
-                <h6>Connect with us:</h6>
-                <div class="form-icons">
-                  <a href="#"><img src="assets/images/facebook-icon.svg" target="_blank" alt="facebook"></a>
-                  <a href="#"><img src="assets/images/linkedin-icon.svg" alt="linkedin"></a>
-                  <a href="#"><img src="assets/images/instagram-icon.svg" alt="instagram"></a>
-                  <a href="#"><img src="assets/images/Social.svg" alt="social"></a>
+  
+              <div class="form-right">
+                <div class="input-popup">
+                  <div class="name-email-popup">
+                    <div>
+                      <h5>Name</h5>
+                      <input type="text" class="name-input" placeholder="Full name" />
+                    </div>
+                    <div class="email-popup">
+                      <h5>Email</h5>
+                      <input type="email" placeholder="Email adress" id="pupup-email" />
+                    </div>
+                  </div>
+  
+                  <div class="subject-popup">
+                    <h5>Subjects</h5>
+                    <input type="text" name="" id="subject" class="subject" placeholder="Subject">
+                  </div>
+                  <div class="company-name-popup">
+                    <h5>Company Name</h5>
+                    <input type="text" placeholder="Brand/ Company/ Product Name">
+                  </div>
+                  <div class="message-popup">
+                    <h5>Message</h5>
+                    <textarea rows="5" placeholder="Tell us about your project..."></textarea>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="form-right">
-              <div class="input-popup">
-                <div class="name-email-popup">
-                  <div>
-                    <h5>Name</h5>
-                    <input type="text" class="name-input" placeholder="Full name" />
-                  </div>
-                  <div class="email-popup">
-                    <h5>Email</h5>
-                    <input type="email" placeholder="Email adress" id="pupup-email" />
-                  </div>
-                </div>
-
-                <div class="subject-popup">
-                  <h5>Subjects</h5>
-                  <input type="text" name="" id="subject" class="subject" placeholder="Subject">
-                </div>
-                <div class="company-name-popup">
-                  <h5>Company Name</h5>
-                  <input type="text" placeholder="Brand/ Company/ Product Name">
-                </div>
-                <div class="message-popup">
-                  <h5>Message</h5>
-                  <textarea rows="5" placeholder="Tell us about your project..."></textarea>
-                </div>
-              </div>
+            <div class="form-btn">
+              <button class="btn-primary">Göndər</button>
             </div>
           </div>
-          <div class="form-btn">
-            <button class="btn-primary">Göndər</button>
-
-          </div>
-
         </div>
       </div>
     </section>
@@ -157,6 +158,8 @@
             <img src="/assets/images/X.svg" alt="x">
             <img src="/assets/images/instagram.svg" alt="instagram">
             <img src="/assets/images/linkedin.svg" alt="linkedin">
+            <img src="/assets/images/tiktok-icons.svg" alt="tiktok">
+
           </div>
         </div>
         <div class="footer-about-container">

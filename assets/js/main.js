@@ -187,72 +187,95 @@ $(document).ready(function() {
   });
 });
   
-
-  $(document).ready(function() {
-    var $slider = $('.slider-container-project').slick({
-      dots: false,
-      infinite: true,
-      autoplay: true,
-      speed: 1000,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      rows: 2,
-      arrows: false, 
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            rows: 2,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            rows: 2,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            rows: 2,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            rows: 1,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            rows: 1,
-          }
+$(document).ready(function() {
+  var $slider = $('.project-img').slick({
+    dots: false,
+    infinite: true,
+    autoplay: false,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true, 
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
         }
-      ]
-    });
-  
-    $('#next').click(function() {
-      $slider.slick('slickNext');
-    });
-  
-    $('#prev').click(function() {
-      $slider.slick('slickPrev');
-    });
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
+});
+
+
+  
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".btn-list");
+  const cards = document.querySelectorAll(".custom-card");
+
+  function setActiveButton(activeButton) {
+      buttons.forEach(btn => btn.classList.remove("active")); // Önce tüm butonlardan "active" sınıfını kaldır
+      activeButton.classList.add("active"); // Sadece tıklanan butona "active" ekle
+  }
+
+  buttons[0].addEventListener("click", function () {
+      setActiveButton(this);
+      cards.forEach(card => {
+          card.style.display = "block";
+      });
+  });
+
+  buttons[1].addEventListener("click", function () {
+      setActiveButton(this);
+      cards.forEach(card => {
+          const hasStatus = card.querySelector(".status-label");
+          card.style.display = hasStatus ? "block" : "none";
+      });
+  });
+
+  buttons[2].addEventListener("click", function () {
+      setActiveButton(this);
+      cards.forEach(card => {
+          const hasStatus = card.querySelector(".status-label");
+          card.style.display = hasStatus ? "none" : "block";
+      });
+  });
+});
+
+
+
 
 
 // const prev = document.getElementById("prev");

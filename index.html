@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,16 +14,37 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Ana Səhifə</title>
 </head>
-
 <body>
-
   <header>
     <div class="header-fixed">
-      <div class="header">
-        <a href="/index.html" class="header-logo">
-          <img src="./assets/images/logo.svg" alt="Akın" />
-        </a>
-        <nav class="header-nav">
+      <div class="container-site">
+        <div class="header">
+          <a href="/index.html" class="header-logo">
+            <img src="./assets/images/logo.svg" alt="Akın" />
+          </a>
+          <nav class="header-nav">
+            <ul>
+              <li><a href="index.html">Ana səhifə</a></li>
+              <li><a href="about.html">Haqqımızda</a></li>
+              <li><a href="projects.html">Layihələr</a></li>
+              <li><a href="services.html">Xidmətlər</a></li>
+              <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+          </nav>
+          <div class="label-burger">
+            <div class="head-label">
+              <button class="openPopup">Bizimlə əlaqə</button>
+            </div>
+            <div class="burger-menu" id="burgerMenu">
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mobile-nav" id="mobileNav">
+          <button class="close-btn" id="closeBtnNav">&times;</button>
           <ul>
             <li><a href="index.html">Ana səhifə</a></li>
             <li><a href="about.html">Haqqımızda</a></li>
@@ -31,30 +52,10 @@
             <li><a href="services.html">Xidmətlər</a></li>
             <li><a href="contact.html">Əlaqə</a></li>
           </ul>
-        </nav>
-        <div class="label-burger">
-          <div class="head-label">
-            <button class="openPopup">Bizimlə əlaqə</button>
-          </div>
-          <div class="burger-menu" id="burgerMenu">
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-          </div>
         </div>
+        <div class="overlay" id="overlay"></div>
       </div>
-
-      <div class="mobile-nav" id="mobileNav">
-        <button class="close-btn" id="closeBtnNav">&times;</button>
-        <ul>
-          <li><a href="index.html">Ana səhifə</a></li>
-          <li><a href="about.html">Haqqımızda</a></li>
-          <li><a href="projects.html">Layihələr</a></li>
-          <li><a href="services.html">Xidmətlər</a></li>
-          <li><a href="contact.html">Əlaqə</a></li>
-        </ul>
-      </div>
-      <div class="overlay" id="overlay"></div>
+      
     </div>
   </header>
 
@@ -65,8 +66,8 @@
         <div class="showcase">
           <div class="showcase-left">
             <div class="showcase-left-contact">
-              <h2 class="heading-primary">
-                Yenilikçi həllərlə möhkəm təməl qururuq! </h2>
+              <h1 class="heading-primary">
+                Yenilikçi həllərlə möhkəm təməl qururuq! </h1>
               <a href="#"><button class="btn-primary openPopup">Bizimlə əlaqə</button></a>
             </div>
             <div class="showcase-left-deskop">
@@ -142,8 +143,7 @@
     <section>
       <div class="container-site">
         <div class="about-container">
-
-          <div class="about-img"><img src="/assets/images/Rectangle 752.svg" alt="#" /></div>
+          <img class="about-img" src="/assets/images/Rectangle 752.svg" alt="#" />
           <div class="about-info">
 
             <div class="parent">
@@ -222,94 +222,97 @@
 
 
     <!-- service-section -->
-    <section>
-      <div class="service-section mt-80">
-        <div class="service-contain">
-          <div class="service-cards">
-            <div class="service-text heading-primary font-primary">Xidmətlər</div>
-
-            <a class="div1">
-              <div class="card-service">
+    <section class="bg-black">
+      <div class="container-site">
+        <div class="service-section mt-80">
+          <div class="service-contain">
+            <div class="service-cards">
+              <div class="service-text heading-primary font-primary">Xidmətlər</div>
+  
+              <a class="div1">
+                <div class="card-service">
+                  <div>
+                    <img src="/assets/images/Group.svg" alt="elements" />
+                  </div>
+                  <div class="cards-text">
+                    <h4>İnfrastruktur Layihələri</h4>
+                    <h6>
+                      Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
+                    </h6>
+                  </div>
+                </div>
+              </a>
+  
+              <a class="div2">
+                <div class="card-service">
+                  <div>
+                    <img src="/assets/images/Group.svg" alt="elements" />
+                  </div>
+                  <div class="cards-text">
+                    <h4>İnfrastruktur Layihələri</h4>
+                    <h6>
+                      Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
+                    </h6>
+                  </div>
+                </div>
+              </a>
+  
+              <a class="div3">
+                <div class="card-service">
+                  <div>
+                    <img src="/assets/images/Group.svg" alt="elements" />
+                  </div>
+                  <div class="cards-text">
+                    <h4>İnfrastruktur Layihələri
+                    </h4>
+                    <h6>
+                      Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
+                    </h6>
+                  </div>
+                </div>
+              </a>
+  
+              <a class="div4">
+                <div class="card-service">
+                  <div>
+                    <img src="/assets/images/Group.svg" alt="elements" />
+                  </div>
+                  <div class="cards-text">
+                    <h4>İnfrastruktur Layihələri
+                    </h4>
+                    <h6>
+                      Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
+                    </h6>
+                  </div>
+                </div>
+              </a>
+  
+              <a class="div5">
+                <div class="card-service">
+                  <div>
+                    <img src="/assets/images/Group.svg" alt="elements" />
+                  </div>
+                  <div class="cards-text">
+                    <h4>İnfrastruktur Layihələri
+                    </h4>
+                    <h6>
+                      Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
+                    </h6>
+                  </div>
+                </div>
+              </a>
+  
+              <div class="div6">
                 <div>
-                  <img src="/assets/images/Group.svg" alt="elements" />
+                  <a href="services.html" class="circle-about">Ətraflı <img src="assets/images/arrow-icon.svg" alt="arrow"></a>
                 </div>
-                <div class="cards-text">
-                  <h4>İnfrastruktur Layihələri</h4>
-                  <h6>
-                    Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
-                  </h6>
-                </div>
+  
               </div>
-            </a>
-
-            <a class="div2">
-              <div class="card-service">
-                <div>
-                  <img src="/assets/images/Group.svg" alt="elements" />
-                </div>
-                <div class="cards-text">
-                  <h4>İnfrastruktur Layihələri</h4>
-                  <h6>
-                    Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
-                  </h6>
-                </div>
-              </div>
-            </a>
-
-            <a class="div3">
-              <div class="card-service">
-                <div>
-                  <img src="/assets/images/Group.svg" alt="elements" />
-                </div>
-                <div class="cards-text">
-                  <h4>İnfrastruktur Layihələri
-                  </h4>
-                  <h6>
-                    Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
-                  </h6>
-                </div>
-              </div>
-            </a>
-
-            <a class="div4">
-              <div class="card-service">
-                <div>
-                  <img src="/assets/images/Group.svg" alt="elements" />
-                </div>
-                <div class="cards-text">
-                  <h4>İnfrastruktur Layihələri
-                  </h4>
-                  <h6>
-                    Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
-                  </h6>
-                </div>
-              </div>
-            </a>
-
-            <a class="div5">
-              <div class="card-service">
-                <div>
-                  <img src="/assets/images/Group.svg" alt="elements" />
-                </div>
-                <div class="cards-text">
-                  <h4>İnfrastruktur Layihələri
-                  </h4>
-                  <h6>
-                    Yol, körpü və digər mühüm infrastruktur obyektlərini layihələndirir və tikirik.
-                  </h6>
-                </div>
-              </div>
-            </a>
-
-            <div class="div6">
-              <div>
-                <a href="services.html" class="circle-about">Ətraflı <img src="assets/images/arrow-icon.svg" alt="arrow"></a>
-              </div>
-
             </div>
           </div>
         </div>
       </div>
+      
     </section>
 
     <!-- Lahiyələr -->
@@ -344,62 +347,80 @@
 
           <a href="projectPage.html" class="slider-card">
             <img src="assets/images/sliderfoto1.png" alt="tower">
-            <div class="slider-text">
-              <h3>Heydər Əliyev Mərkəzi</h3>
-              <div>
-                <h5>12 Fevral</h5>
-                <h5>2025</h5>
+            <div>
+              <div class="slider-text">
+                <h5>Heydər Əliyev Mərkəzi</h5>
+                <div>
+                  <span>12 Fevral 2025</span>
+                </div>
               </div>
+              <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+          
             </div>
           </a>
           <a href="projectPage.html" class="slider-card">
             <img src="assets/images/sliderfoto2.png" alt="tower">
-            <div class="slider-text">
-              <h3>Heydər Əliyev Mərkəzi</h3>
-              <div>
-                <h5>12 Fevral</h5>
-                <h5>2025</h5>
+            <div>
+              <div class="slider-text">
+                <h5>Heydər Əliyev Mərkəzi</h5>
+                <div>
+                  <span>12 Fevral 2025</span>
+                </div>
               </div>
+              <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+          
             </div>
           </a>
           <a href="projectPage.html" class="slider-card">
             <img src="assets/images/sliderfoto3.png" alt="tower">
-            <div class="slider-text">
-              <h3>Heydər Əliyev Mərkəzi</h3>
-              <div>
-                <h5>12 Fevral</h5>
-                <h5>2025</h5>
+            <div>
+              <div class="slider-text">
+                <h5>Heydər Əliyev Mərkəzi</h5>
+                <div>
+                  <span>12 Fevral 2025</span>
+                </div>
               </div>
+              <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+          
             </div>
           </a>
           <a href="projectPage.html" class="slider-card">
             <img src="assets/images/sliderfoto4.png" alt="tower">
-            <div class="slider-text">
-              <h3>Heydər Əliyev Mərkəzi</h3>
-              <div>
-                <h5>12 Fevral</h5>
-                <h5>2025</h5>
+            <div>
+              <div class="slider-text">
+                <h5>Heydər Əliyev Mərkəzi</h5>
+                <div>
+                  <span>12 Fevral 2025</span>
+                </div>
               </div>
+              <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+          
             </div>
           </a>
           <a href="projectPage.html" class="slider-card">
             <img src="assets/images/sliderfoto5.png" alt="tower">
-            <div class="slider-text">
-              <h3>Heydər Əliyev Mərkəzi</h3>
-              <div>
-                <h5>12 Fevral</h5>
-                <h5>2025</h5>
+            <div>
+              <div class="slider-text">
+                <h5>Heydər Əliyev Mərkəzi</h5>
+                <div>
+                  <span>12 Fevral 2025</span>
+                </div>
               </div>
+              <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+          
             </div>
           </a>
           <a href="projectPage.html" class="slider-card">
             <img src="assets/images/sliderfoto6.png" alt="tower">
-            <div class="slider-text">
-              <h3>Heydər Əliyev Mərkəzi</h3>
-              <div>
-                <h5>12 Fevral</h5>
-                <h5>2025</h5>
+            <div>
+              <div class="slider-text">
+                <h5>Heydər Əliyev Mərkəzi</h5>
+                <div>
+                  <span>12 Fevral 2025</span>
+                </div>
               </div>
+              <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+          
             </div>
           </a>
         </div>
@@ -409,11 +430,11 @@
             <button id="next" class="btn-scroll"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
 
-          <div class="arrow-icon">
-            <a href="projects.html">Ətraflı oxu</a>
+          <a class="arrow-icon" href="projects.html">
+            <span >Ətraflı oxu</span>
             <div><img src="assets/images/arrow-icon.svg" alt=""></div>
 
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -421,6 +442,7 @@
 
     <!-- form-container -->
     <section>
+      <div class="container-site">
       <div class="form-section">
         <div class="form-container">
           <div class="contact-form">
@@ -492,14 +514,13 @@
 
         </div>
       </div>
-
+    </div>
 
     </section>
 
   </main>
-  
-  <footer>
-    <div class="footer-container ">
+  <footer class="bg-black">
+    <div class="footer-container">
       <div class="footer-top padding-special">
         <div class="footer-logo">
           <div class="footer-logo-img">
@@ -510,6 +531,7 @@
             <img src="/assets/images/X.svg" alt="x">
             <img src="/assets/images/instagram.svg" alt="instagram">
             <img src="/assets/images/linkedin.svg" alt="linkedin">
+            <img src="/assets/images/tiktok-icons.svg" alt="tiktok">
           </div>
         </div>
         <div class="footer-about-container">
@@ -547,7 +569,7 @@
       </div>
     </div>
   </footer>
-
+  
   <div class="pop-up-container">
     <button class="close-btn-popup" id="closeBtnPopup">&times;</button>
     <div class="popup-contact">

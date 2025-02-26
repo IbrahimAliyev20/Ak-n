@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,11 +17,34 @@
 <body>
   <header>
     <div class="header-fixed">
-      <div class="header">
-        <a href="/index.html" class="header-logo">
-          <img src="./assets/images/logo.svg" alt="Akın" />
-        </a>
-        <nav class="header-nav">
+      <div class="container-site">
+        <div class="header">
+          <a href="/index.html" class="header-logo">
+            <img src="./assets/images/logo.svg" alt="Akın" />
+          </a>
+          <nav class="header-nav">
+            <ul>
+              <li><a href="index.html">Ana səhifə</a></li>
+              <li><a href="about.html">Haqqımızda</a></li>
+              <li><a href="projects.html">Layihələr</a></li>
+              <li><a href="services.html">Xidmətlər</a></li>
+              <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+          </nav>
+          <div class="label-burger">
+            <div class="head-label">
+              <button class="openPopup">Bizimlə əlaqə</button>
+            </div>
+            <div class="burger-menu" id="burgerMenu">
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mobile-nav" id="mobileNav">
+          <button class="close-btn" id="closeBtnNav">&times;</button>
           <ul>
             <li><a href="index.html">Ana səhifə</a></li>
             <li><a href="about.html">Haqqımızda</a></li>
@@ -30,33 +52,11 @@
             <li><a href="services.html">Xidmətlər</a></li>
             <li><a href="contact.html">Əlaqə</a></li>
           </ul>
-        </nav>
-        <div class="label-burger">
-          <div class="head-label">
-            <button class="openPopup">Bizimlə əlaqə</button>
-          </div>
-          <div class="burger-menu" id="burgerMenu">
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-          </div>
         </div>
+        <div class="overlay" id="overlay"></div>
       </div>
-
-      <div class="mobile-nav" id="mobileNav">
-        <button class="close-btn" id="closeBtnNav">&times;</button>
-        <ul>
-          <li><a href="index.html">Ana səhifə</a></li>
-          <li><a href="about.html">Haqqımızda</a></li>
-          <li><a href="projects.html">Layihələr</a></li>
-          <li><a href="services.html">Xidmətlər</a></li>
-          <li><a href="contact.html">Əlaqə</a></li>
-        </ul>
-      </div>
-      <div class="overlay" id="overlay"></div>
+      
     </div>
-
-
   </header>
 
   <main>
@@ -65,7 +65,7 @@
       <div class="container-site ">
         <div class="info-section pt-120">
           <div class="about-us">
-            <h2 class="heading-primary font-primary">
+            <h2 class="heading-primary font-primary dp-none">
               Layihələr</h2>
           </div>
           <div class="info-section-about">
@@ -83,111 +83,134 @@
         </div>
       </div>
     </section>
+    
     <div class="container-site">
       <div class="btn-pdng">
         <button class="btn-list" >Hamısı</button>
         <button class="btn-list">Davam edən layihələr</button>
+        <button class="btn-list">Bitmiş layihələr</button>
       </div>
      
     </div>
 
     <section>
       <div class="container-site">
-        <div class="slider-container-projects">
-          <div class="slider-container-project">
-
-            <a href="projectPage.html" class="slider-card m-10">
-              <img src="assets/images/sliderfoto1.png" alt="tower">
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
+        <div class="custom-grid">
+            <a href="projectPage.html" class="custom-card">
+                <img src="assets/images/sliderfoto1.png" alt="tower">
                 <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
                 </div>
-              </div>
             </a>
-            <a href="projectPage.html" class="slider-card m-10">
-              <img src="assets/images/sliderfoto2.png" alt="tower">
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
+    
+            <a href="projectPage.html" class="custom-card">
+                <img src="assets/images/sliderfoto2.png" alt="tower">
+                <div class="status-label">İcradadır</div>
                 <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
                 </div>
-              </div>
             </a>
-            <a href="projectPage.html" class="slider-card m-10">
+    
+            <a href="projectPage.html" class="custom-card">
                 <img src="assets/images/sliderfoto3.png" alt="tower">
                 <div class="status-label">İcradadır</div>
-
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
                 <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
                 </div>
-              </div>
             </a>
-            <a href="projectPage.html" class="slider-card m-10">
-              <img src="assets/images/sliderfoto4.png" alt="tower">
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
+    
+            <a href="projectPage.html" class="custom-card">
+                <img src="assets/images/sliderfoto4.png" alt="tower">
                 <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
                 </div>
-              </div>
             </a>
-            <a href="projectPage.html" class="slider-card m-10">
-              <img src="assets/images/sliderfoto5.png" alt="tower">
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
+    
+            <a href="projectPage.html" class="custom-card">
+                <img src="assets/images/sliderfoto5.png" alt="tower">
                 <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
                 </div>
-              </div>
             </a>
-            <a href="projectPage.html" class="slider-card m-10">
-              <img src="assets/images/sliderfoto6.png" alt="tower">
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
-                <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
-                </div>
-              </div>
-            </a>
-            <a href="projectPage.html" class="slider-card m-10">
-              <img src="assets/images/sliderfoto6.png" alt="tower">
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
-                <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
-                </div>
-              </div>
-            </a>
-            <a href="projectPage.html" class="slider-card m-10">
+    
+            <a href="projectPage.html" class="custom-card">
                 <img src="assets/images/sliderfoto6.png" alt="tower">
-
-              <div class="slider-text">
-                <h3>Heydər Əliyev Mərkəzi</h3>
                 <div>
-                  <h5>12 Fevral</h5>
-                  <h5>2025</h5>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
                 </div>
-              </div>
             </a>
-          </div>
+    
+            <a href="projectPage.html" class="custom-card">
+                <img src="assets/images/sliderfoto6.png" alt="tower">
+                <div>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
+                </div>
+            </a>
+    
+            <a href="projectPage.html" class="custom-card">
+                <img src="assets/images/sliderfoto6.png" alt="tower">
+                <div>
+                  <div class="custom-text">
+                    <h5>Heydər Əliyev Mərkəzi</h5>
+                    <div>
+                      <span>12 Fevral 2025</span>
+                    </div>
+                  </div>
+                  <p class="descrptn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim.</p>
+              
+                </div>
+            </a>
         </div>
-        <div class="slider-btn-spc">
-          <div>
-            <button id="prev" class="btn-scroll"><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="next" class="btn-scroll"><i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-      </div>
+    </div>
     </section>
 
   </main>
@@ -203,6 +226,8 @@
             <img src="/assets/images/X.svg" alt="x">
             <img src="/assets/images/instagram.svg" alt="instagram">
             <img src="/assets/images/linkedin.svg" alt="linkedin">
+            <img src="/assets/images/tiktok-icons.svg" alt="tiktok">
+
           </div>
         </div>
         <div class="footer-about-container">

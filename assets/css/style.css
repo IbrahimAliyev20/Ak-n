@@ -1535,6 +1535,12 @@ iframe {
   .services-list {
     padding: 30px;
   }
+  .info-section{
+    margin-bottom: 30px;
+  }
+  .mt-159{
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 992px) {

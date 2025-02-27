@@ -1,281 +1,134 @@
-const burgerMenu = document.getElementById('burgerMenu');
-const mobileNav = document.getElementById('mobileNav');
-const closeBtnNav = document.getElementById('closeBtnNav'); 
-const overlay = document.getElementById('overlay');
+const burgerMenu = document.getElementById("burgerMenu");
+const mobileNav = document.getElementById("mobileNav");
+const closeBtnNav = document.getElementById("closeBtnNav");
+const overlay = document.getElementById("overlay");
 
-if (burgerMenu) {
-  burgerMenu.addEventListener('click', function() {
-    mobileNav.style.right = "0";
-    overlay.classList.add('active');
-  });
+function toggleNav(open) {
+  mobileNav.style.right = open ? "0" : "-500px";
+  overlay.classList.toggle("active", open);
 }
 
-if (closeBtnNav) {
-  closeBtnNav.addEventListener('click', function() {
-    mobileNav.style.right = "-500px";
-    overlay.classList.remove('active');
-  });
+if (burgerMenu && mobileNav && overlay) {
+  burgerMenu.addEventListener("click", () => toggleNav(true));
+  closeBtnNav?.addEventListener("click", () => toggleNav(false));
+  overlay.addEventListener("click", () => toggleNav(false));
 }
-
-if (overlay) {
-  overlay.addEventListener('click', function() {
-    mobileNav.style.right = "-500px";
-    overlay.classList.remove('active');
-  });
-}
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.querySelector(".pop-up-container");
   const openBtns = document.querySelectorAll(".openPopup");
   const closeBtnPopup = document.getElementById("closeBtnPopup");
-  const overlayPopup = document.createElement("div");
 
+  if (!popup || !closeBtnPopup) return;
+
+  const overlayPopup = document.createElement("div");
   overlayPopup.id = "overlayPopup";
   document.body.appendChild(overlayPopup);
 
-  if (popup && closeBtnPopup) {
- 
-      openBtns.forEach(btn => {
-          btn.addEventListener("click", () => {
-              popup.style.display = "block";
-              overlayPopup.classList.add("active");
-              document.body.classList.add("modal-open");
-          });
-      });
-
-      closeBtnPopup.addEventListener("click", closePopup);
-      overlayPopup.addEventListener("click", closePopup);
-
-      document.addEventListener("keydown", function(event) {
-          if (event.key === "Escape") {
-              closePopup();
-          }
-      });
-
-      function closePopup() {
-          popup.style.display = "none";
-          overlayPopup.classList.remove("active");
-          document.body.classList.remove("modal-open");
-      }
+  function closePopup() {
+    popup.style.display = "none";
+    overlayPopup.classList.remove("active");
+    document.body.classList.remove("modal-open");
   }
+
+  openBtns.forEach(btn =>
+    btn.addEventListener("click", () => {
+      popup.style.display = "block";
+      overlayPopup.classList.add("active");
+      document.body.classList.add("modal-open");
+    })
+  );
+
+  closeBtnPopup.addEventListener("click", closePopup);
+  overlayPopup.addEventListener("click", closePopup);
+  document.addEventListener("keydown", (e) => e.key === "Escape" && closePopup());
 });
 
-
-
-$(document).ready(function() {
-  var $slider = $('.slider-container-certificate').slick({
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false, 
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+function initializeSlickSlider(selector, slidesToShow = 3, slidesToScroll = 3, autoplay = true, arrows = false) {
+  $(document).ready(function () {
+    $(selector).slick({
+      dots: false,
+      infinite: true,
+      autoplay: autoplay,
+      speed: 1000,
+      slidesToShow: slidesToShow,
+      slidesToScroll: slidesToScroll,
+      arrows: arrows,
+      responsive: [
+        { breakpoint: 1200, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+        { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+        { breakpoint: 800, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+        { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+        { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+      ]
+    });
   });
+}
 
-  $('#next').click(function() {
-  $slider.slick('slickNext');
-});
+initializeSlickSlider(".slider-container-certificate");
+initializeSlickSlider(".slider-container");
+initializeSlickSlider(".project-img", 1, 1, false, true);
 
-$('#prev').click(function() {
-  $slider.slick('slickPrev');
-});
-});
-
-
-
-$(document).ready(function() {
-  var $slider = $('.slider-container').slick({
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false, 
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
-  $('#next').click(function() {
-    $slider.slick('slickNext');
-  });
-
-  $('#prev').click(function() {
-    $slider.slick('slickPrev');
-  });
-});
-  
-$(document).ready(function() {
-  var $slider = $('.project-img').slick({
-    dots: false,
-    infinite: true,
-    autoplay: false,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true, 
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+$(document).ready(function () {
+  $("#next, #prev").click(function () {
+    const direction = $(this).attr("id") === "next" ? "slickNext" : "slickPrev";
+    $(".slider-container, .slider-container-certificate").slick(direction);
   });
 });
 
-
-  
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".btn-list");
   const cards = document.querySelectorAll(".custom-card");
 
   function setActiveButton(activeButton) {
-      buttons.forEach(btn => btn.classList.remove("active")); // Önce tüm butonlardan "active" sınıfını kaldır
-      activeButton.classList.add("active"); // Sadece tıklanan butona "active" ekle
+    buttons.forEach(btn => btn.classList.remove("active"));
+    activeButton.classList.add("active");
+  }
+
+  function filterCards(showStatus) {
+    cards.forEach(card => {
+      const hasStatus = card.querySelector(".status-label") !== null;
+      if (showStatus === null) {
+        card.style.display = "block"; 
+      } else if (showStatus) {
+        card.style.display = hasStatus ? "block" : "none"; 
+      } else {
+        card.style.display = hasStatus ? "none" : "block"; 
+      }
+    });
   }
 
   buttons[0].addEventListener("click", function () {
-      setActiveButton(this);
-      cards.forEach(card => {
-          card.style.display = "block";
-      });
+    setActiveButton(this);
+    filterCards(null); 
   });
 
   buttons[1].addEventListener("click", function () {
-      setActiveButton(this);
-      cards.forEach(card => {
-          const hasStatus = card.querySelector(".status-label");
-          card.style.display = hasStatus ? "block" : "none";
-      });
+    setActiveButton(this);
+    filterCards(true); 
   });
 
   buttons[2].addEventListener("click", function () {
-      setActiveButton(this);
-      cards.forEach(card => {
-          const hasStatus = card.querySelector(".status-label");
-          card.style.display = hasStatus ? "none" : "block";
-      });
+    setActiveButton(this);
+    filterCards(false); 
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.getElementById("closeBtn");
 
-
+  document.body.addEventListener("click", function (e) {
+    if (e.target.classList.contains("certificate-img")) {
+      modal.classList.remove("hidden");
+      modalImg.src = e.target.src;
+    }
+    if (e.target === modal || e.target === closeBtn) {
+      modal.classList.add("hidden");
+    }
+  });
+});
 
 
 // const prev = document.getElementById("prev");
